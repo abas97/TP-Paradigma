@@ -137,7 +137,7 @@ ordenamientoDeAutos lista = (ordenamiento 0.sumadeDesgaste) lista
 --5
 data OrdenDeReparacion = OrdenDeReparacion {
      fechaOrden       :: Fecha,
-     trabajadores :: [Trabajo]
+     trabajadores :: [Tecnico]
 } deriving (Show)
 
 aplicarOrdenDeReparacion :: OrdenDeReparacion -> Auto -> Auto
