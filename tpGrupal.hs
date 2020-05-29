@@ -8,11 +8,11 @@ main = return()
 
 type Desgaste = Float
 type Patente = String
-type Fecha = (Float, Float, Float)
+type Fecha = (Int, Int, Int)
 type Tecnico = Auto->Auto
  
 -- Definiciones base
-anio :: Fecha -> Float
+anio :: Fecha -> Int
 anio (_, _, year) = year
  
 data Auto = Auto {
@@ -68,7 +68,7 @@ desgastePrimerRueda auto = (head.desgasteLlantas) auto
 necesitaRevision :: Auto -> Bool
 necesitaRevision auto = (<= 2015) . anioDeArreglo $ auto
 
-anioDeArreglo :: Auto -> Float
+anioDeArreglo :: Auto -> Int
 anioDeArreglo auto = (anio . ultimoArreglo)  auto
 
 
